@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SMDE | Smart Maintenance Decision Engine</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top smde-navbar">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+            <span class="brand-icon">
+                <i class="bi bi-cpu"></i>
+            </span>
+            <span>SMDE</span>
+        </a>
+
+        <button class="navbar-toggler border-0" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+            <i class="bi bi-list fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#how">How It Works</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+            </ul>
+
+            <div class="d-flex gap-2">
+                <a href="./login.html" class="btn btn-login">Login</a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero-section">
+
+    <div class="hero-glow"></div>
+
+    <div class="container">
+
+        <div class="row align-items-center min-vh-100 pt-5">
+
+            <!-- LEFT -->
+
+            <div class="col-lg-6">
+
+                <div class="hero-badge mb-4">
+                    <span class="pulse-dot"></span>
+                    AI-POWERED PREDICTIVE MAINTENANCE
+                </div>
+
+                <h1 class="hero-title">
+                    Smarter Maintenance.
+                    <span>Better Decisions.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Transform machine telemetry and maintenance data into
+                    intelligent decisions using machine learning,
+                    risk analysis, and predictive intelligence.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+
+                    <a href="./login.html" class="btn btn-primary-custom btn-lg">
+                        Start a Decision
+                        <i class="bi bi-arrow-up-right ms-2"></i>
+                    </a>
+
+                    <a href="#how" class="btn btn-outline-custom btn-lg">
+                        Explore How It Works
+                    </a>
+
+                </div>
+
+
+                <!-- Flow -->
+
+                <div class="mini-flow mt-5">
+
+                    <div>
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <span>Predict</span>
+                    </div>
+
+                    <i class="bi bi-chevron-right"></i>
+
+                    <div>
+                        <i class="bi bi-cpu"></i>
+                        <span>Analyze</span>
+                    </div>
+
+                    <i class="bi bi-chevron-right"></i>
+
+                    <div>
+                        <i class="bi bi-check2-circle"></i>
+                        <span>Decide</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="col-lg-6 mt-5 mt-lg-0">
+
+                <div class="ai-dashboard-card">
+
+                    <div class="card-top">
+
+                        <div>
+                            <small>AI MACHINE INTELLIGENCE</small>
+                            <h5>Machine M-017</h5>
+                        </div>
+
+                        <span class="online-status">
+                            <span></span> LIVE
+                        </span>
+
+                    </div>
+
+
+                    <!-- Machine -->
+
+                    <div class="machine-visual">
+
+                        <div class="machine-circle">
+
+                            <div class="machine-inner">
+                                <i class="bi bi-gear-wide-connected"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="ai-core">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Machine Telemetry -->
+
+                    <div class="row g-3 mt-3">
+
+                        <div class="col-6">
+
+                            <div class="sensor-card">
+
+                                <i class="bi bi-lightning-charge"></i>
+
+                                <div>
+                                    <small>Voltage</small>
+                                    <strong>170.2</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-6">
+
+                            <div class="sensor-card">
+
+                                <i class="bi bi-arrow-repeat"></i>
+
+                                <div>
+                                    <small>Rotation</small>
+                                    <strong>1,840 rpm</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-6">
+
+                            <div class="sensor-card">
+
+                                <i class="bi bi-speedometer2"></i>
+
+                                <div>
+                                    <small>Pressure</small>
+                                    <strong>6.2</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-6">
+
+                            <div class="sensor-card">
+
+                                <i class="bi bi-activity"></i>
+
+                                <div>
+                                    <small>Vibration</small>
+                                    <strong>4.82</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- AI Result -->
+
+                    <div class="ai-result mt-4">
+
+                        <div>
+
+                            <small>AI DECISION</small>
+
+                            <h4>
+                                <span class="warning-dot"></span>
+                                Maintenance Required
+                            </h4>
+
+                        </div>
+
+                        <div class="confidence">
+
+                            <strong>91%</strong>
+
+                            <small>Confidence</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats-section">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-6 col-lg-3">
+
+                <div class="stat-box">
+
+                    <h3>100</h3>
+
+                    <p>Machines in Dataset</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3">
+
+                <div class="stat-box">
+
+                    <h3>24/7</h3>
+
+                    <p>Telemetry Monitoring</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3">
+
+                <div class="stat-box">
+
+                    <h3>4</h3>
+
+                    <p>Telemetry Signals</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3">
+
+                <div class="stat-box">
+
+                    <h3>AI</h3>
+
+                    <p>Predictive Analysis</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section id="how" class="section-padding">
+
+    <div class="container">
+
+        <div class="section-heading text-center">
+
+            <span class="section-label">
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                From Machine Data
+                <span>to Smart Action.</span>
+            </h2>
+
+            <p>
+                SMDE transforms machine telemetry, failure records,
+                and maintenance data into clear, actionable decisions.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <!-- STEP 01 -->
+
+            <div class="col-lg-4">
+
+                <div class="process-card">
+
+                    <div class="process-number">01</div>
+
+                    <div class="process-icon">
+                        <i class="bi bi-database"></i>
+                    </div>
+
+                    <h4>Collect Data</h4>
+
+                    <p>
+                        Analyze machine telemetry such as voltage,
+                        rotation, pressure and vibration, along with
+                        machine and maintenance records.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 02 -->
+
+            <div class="col-lg-4">
+
+                <div class="process-card featured-process">
+
+                    <div class="process-number">02</div>
+
+                    <div class="process-icon">
+                        <i class="bi bi-cpu"></i>
+                    </div>
+
+                    <h4>AI Analysis</h4>
+
+                    <p>
+                        The machine learning model analyzes machine
+                        behavior and identifies patterns associated
+                        with potential failures.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 03 -->
+
+            <div class="col-lg-4">
+
+                <div class="process-card">
+
+                    <div class="process-number">03</div>
+
+                    <div class="process-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h4>Smart Decision</h4>
+
+                    <p>
+                        Receive a maintenance recommendation based on
+                        predicted risk, machine condition and historical
+                        maintenance information.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section id="features" class="section-padding features-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                CORE FEATURES
+            </span>
+
+            <h2>
+                Intelligence Built Into
+                <span>Every Decision.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <!-- 01 -->
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <div class="feature-card h-100">
+
+                    <i class="bi bi-stars"></i>
+
+                    <h5>
+                        Predictive Intelligence
+                    </h5>
+
+                    <p>
+                        Predict potential machine failures
+                        before they happen.
+                    </p>
+
+                    <a href="./features.html#predictive">
+                        Learn more
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- 02 -->
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <div class="feature-card h-100">
+
+                    <i class="bi bi-exclamation-triangle"></i>
+
+                    <h5>
+                        Risk Detection
+                    </h5>
+
+                    <p>
+                        Detect abnormal machine behavior
+                        and potential failure risks.
+                    </p>
+
+                    <a href="./features.html#risk">
+                        Learn more
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- 03 -->
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <div class="feature-card h-100">
+
+                    <i class="bi bi-diagram-3"></i>
+
+                    <h5>
+                        Decision Engine
+                    </h5>
+
+                    <p>
+                        Convert predicted risks into practical
+                        maintenance actions.
+                    </p>
+
+                    <a href="./features.html#decision">
+                        Learn more
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- 04 -->
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <div class="feature-card h-100">
+
+                    <i class="bi bi-clock-history"></i>
+
+                    <h5>
+                        Maintenance History
+                    </h5>
+
+                    <p>
+                        Track machine failures, maintenance actions,
+                        and previous decisions.
+                    </p>
+
+                    <a href="./features.html#history">
+                        Learn more
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DECISION PREVIEW ================= -->
+
+<section id="decision" class="section-padding">
+
+    <div class="container">
+
+        <div class="decision-wrapper">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-5">
+
+                    <span class="section-label">
+                        AI DECISION ENGINE
+                    </span>
+
+                    <h2 class="decision-title">
+                        Know What To Do
+                        <span>Before It's Too Late.</span>
+                    </h2>
+
+                    <p>
+                        SMDE doesn't just predict a machine failure.
+                        It helps transform the prediction into
+                        an actionable maintenance decision.
+                    </p>
+
+                    <button class="btn btn-primary-custom mt-3" onclick="showDecision()">
+                        Simulate Decision
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="col-lg-7 mt-5 mt-lg-0">
+
+                    <div class="decision-card">
+
+                        <div class="d-flex justify-content-between align-items-start">
+
+                            <div>
+
+                                <small>MACHINE</small>
+
+                                <h4>M-017</h4>
+
+                            </div>
+
+                            <span class="decision-status">
+                                Maintenance Required
+                            </span>
+
+                        </div>
+
+
+                        <div class="row g-3 mt-3">
+
+                            <div class="col-md-4">
+
+                                <div class="decision-stat">
+
+                                    <small>Risk Level</small>
+
+                                    <strong>72%</strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4">
+
+                                <div class="decision-stat">
+
+                                    <small>Confidence</small>
+
+                                    <strong>91%</strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4">
+
+                                <div class="decision-stat">
+
+                                    <small>Health</small>
+
+                                    <strong>68%</strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <hr>
+
+
+                        <div class="factor">
+
+                            <span>
+                                <i class="bi bi-activity"></i>
+                                Vibration
+                            </span>
+
+                            <strong>High</strong>
+
+                        </div>
+
+
+                        <div class="factor">
+
+                            <span>
+                                <i class="bi bi-speedometer2"></i>
+                                Pressure
+                            </span>
+
+                            <strong>Elevated</strong>
+
+                        </div>
+
+
+                        <div class="recommendation">
+
+                            <i class="bi bi-lightbulb"></i>
+
+                            <div>
+
+                                <small>RECOMMENDED ACTION</small>
+
+                                <p>
+                                    Schedule preventive maintenance
+                                    based on the predicted machine risk.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section-padding about-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <span class="section-label">
+                    WHY SMDE?
+                </span>
+
+                <h2>
+                    Maintenance Should Be
+                    <span>Predictive, Not Reactive.</span>
+                </h2>
+
+                <p class="mt-4">
+                    Traditional maintenance often reacts after a machine
+                    develops a serious problem. SMDE uses machine data,
+                    historical failures and machine learning to help
+                    teams act earlier.
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="comparison-card">
+
+                    <div class="comparison-row header">
+
+                        <span>Traditional</span>
+                        <span>With SMDE</span>
+
+                    </div>
+
+
+                    <div class="comparison-row">
+
+                        <span>
+                            <i class="bi bi-x-circle"></i>
+                            Reactive maintenance
+                        </span>
+
+                        <span>
+                            <i class="bi bi-check-circle"></i>
+                            Predictive maintenance
+                        </span>
+
+                    </div>
+
+
+                    <div class="comparison-row">
+
+                        <span>
+                            <i class="bi bi-x-circle"></i>
+                            Manual decisions
+                        </span>
+
+                        <span>
+                            <i class="bi bi-check-circle"></i>
+                            AI-assisted decisions
+                        </span>
+
+                    </div>
+
+
+                    <div class="comparison-row">
+
+                        <span>
+                            <i class="bi bi-x-circle"></i>
+                            Hidden risks
+                        </span>
+
+                        <span>
+                            <i class="bi bi-check-circle"></i>
+                            Risk detection
+                        </span>
+
+                    </div>
+
+
+                    <div class="comparison-row">
+
+                        <span>
+                            <i class="bi bi-x-circle"></i>
+                            Scattered history
+                        </span>
+
+                        <span>
+                            <i class="bi bi-check-circle"></i>
+                            Centralized history
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-box text-center">
+
+            <span class="section-label">
+                READY TO START?
+            </span>
+
+            <h2>
+                Turn Machine Data Into
+                <span>Smarter Decisions.</span>
+            </h2>
+
+            <p>
+                Start analyzing machine condition with intelligent
+                predictive maintenance.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <div class="footer-brand">
+
+                    <span class="brand-icon">
+                        <i class="bi bi-cpu"></i>
+                    </span>
+
+                    <strong>SMDE</strong>
+
+                </div>
+
+                <p>
+                    Smart Maintenance Decision Engine.
+                    Intelligent maintenance powered by data and AI.
+                </p>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6>Product</h6>
+
+                <a href="#features">Features</a>
+                <a href="#decision">Decision Engine</a>
+                <a href="#how">How It Works</a>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6>Company</h6>
+
+                <a href="#about">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy</a>
+
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <h6>Connect</h6>
+
+                <div class="socials">
+
+                    <a href="https://www.linkedin.com/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="LinkedIn">
+
+                        <i class="bi bi-linkedin"></i>
+
+                    </a>
+
+
+                    <a href="https://github.com/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="GitHub">
+
+                        <i class="bi bi-github"></i>
+
+                    </a>
+
+
+                    <a href="mailto:smde.project@gmail.com"
+                       aria-label="Email">
+
+                        <i class="bi bi-envelope"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 SMDE. All rights reserved.
+            </span>
+
+            <span>
+                AI-powered maintenance intelligence.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+
+<script src="./js/home.js"></script>
+
+</body>
+</html>

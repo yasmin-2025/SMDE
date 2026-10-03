@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SMDE | Machines</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        rel="stylesheet">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="./css/app-shared.css">
+
+    <!-- Machines CSS -->
+    <link rel="stylesheet" href="./css/machines.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app-container">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <div
+        id="sidebarMount"
+        data-active="machines">
+    </div>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="content-area">
+
+
+            <div class="container">
+
+
+                <!-- ================= HEADER ================= -->
+
+                <div class="page-header">
+
+
+                    <div>
+
+                        <span class="section-label">
+                            MACHINE MONITORING
+                        </span>
+
+
+                        <h1>
+                            Monitor Your
+                            <span>Machines.</span>
+                        </h1>
+
+
+                        <p>
+                            Monitor machine telemetry and machine
+                            conditions to support smarter predictive
+                            maintenance decisions.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="header-status">
+
+                        <span class="live-dot"></span>
+
+                        <span>
+                            System Online
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= OVERVIEW ================= -->
+
+                <div class="row g-4 overview-row">
+
+
+                    <!-- TOTAL -->
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="overview-card">
+
+                            <div class="overview-icon">
+
+                                <i class="bi bi-cpu"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Total Machines
+                                </span>
+
+                                <h3 id="totalMachines">
+                                    100
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- NORMAL -->
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="overview-card">
+
+                            <div class="overview-icon normal-icon">
+
+                                <i class="bi bi-check-circle"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Normal
+                                </span>
+
+                                <h3 id="normalMachines">
+                                    —
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- WARNING -->
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="overview-card">
+
+                            <div class="overview-icon warning-icon">
+
+                                <i class="bi bi-exclamation-triangle"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Warning
+                                </span>
+
+                                <h3 id="warningMachines">
+                                    —
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CRITICAL -->
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="overview-card">
+
+                            <div class="overview-icon danger-icon">
+
+                                <i class="bi bi-shield-exclamation"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Critical
+                                </span>
+
+                                <h3 id="criticalMachines">
+                                    —
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= SEARCH & FILTER ================= -->
+
+                <div class="control-bar">
+
+
+                    <div class="search-box">
+
+                        <i class="bi bi-search"></i>
+
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search machine by ID or model...">
+
+                    </div>
+
+
+
+                    <div class="filter-buttons">
+
+
+                        <button
+                            class="filter-btn active"
+                            data-filter="all">
+
+                            All
+
+                        </button>
+
+
+                        <button
+                            class="filter-btn"
+                            data-filter="normal">
+
+                            <span class="filter-dot normal"></span>
+
+                            Normal
+
+                        </button>
+
+
+                        <button
+                            class="filter-btn"
+                            data-filter="warning">
+
+                            <span class="filter-dot warning"></span>
+
+                            Warning
+
+                        </button>
+
+
+                        <button
+                            class="filter-btn"
+                            data-filter="critical">
+
+                            <span class="filter-dot critical"></span>
+
+                            Critical
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= IMPORTANT MACHINES ================= -->
+
+                <div class="section-heading mb-4">
+
+                    <div>
+
+                        <span class="section-label">
+                            SELECTED MACHINES
+                        </span>
+
+                        <h3>
+                            Important Machines
+                        </h3>
+
+                        <p>
+                            A focused view of selected machines from
+                            the predictive maintenance dataset.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= MACHINES ================= -->
+
+                <div
+                    class="row g-4"
+                    id="machinesContainer">
+
+
+
+                    <!-- ================= MACHINE 017 ================= -->
+
+                    <div
+                        class="col-md-6 col-xl-4 machine-item"
+                        data-status="normal"
+                        data-name="Machine M-017">
+
+                        <div class="machine-card">
+
+
+                            <!-- TOP -->
+
+                            <div class="machine-card-top">
+
+                                <div>
+
+                                    <span class="machine-id">
+                                        MACHINE M-017
+                                    </span>
+
+                                    <h4>
+                                        Machine 17
+                                    </h4>
+
+                                </div>
+
+
+                                <span class="status-badge normal">
+
+                                    <span></span>
+
+                                    Monitoring
+
+                                </span>
+
+                            </div>
+
+
+
+                            <!-- MACHINE VISUAL -->
+
+                            <div class="machine-visual-small">
+
+                                <div class="machine-ring">
+
+                                    <div class="machine-core">
+
+                                        <i class="bi bi-gear-wide-connected"></i>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="machine-ai">
+
+                                    <i class="bi bi-cpu"></i>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- MACHINE INFO -->
+
+                            <div class="health-row">
+
+                                <div>
+
+                                    <small>
+                                        Machine Age
+                                    </small>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <small>
+                                        Model
+                                    </small>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- TELEMETRY -->
+
+                            <div class="sensor-grid">
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-lightning-charge"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Voltage
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-arrow-repeat"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Rotation
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-speedometer2"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Pressure
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-activity"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Vibration
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- RISK -->
+
+                            <div class="risk-section">
+
+                                <div>
+
+                                    <small>
+                                        Failure Risk
+                                    </small>
+
+                                    <strong class="risk-normal">
+                                        Pending
+                                    </strong>
+
+                                </div>
+
+
+                                <span>
+                                    ML not connected
+                                </span>
+
+                            </div>
+
+
+
+                            <!-- BUTTON -->
+
+                            <button
+                                class="view-machine-btn"
+                                onclick="viewMachine('M-017')">
+
+                                View Machine
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= MACHINE 024 ================= -->
+
+                    <div
+                        class="col-md-6 col-xl-4 machine-item"
+                        data-status="normal"
+                        data-name="Machine M-024">
+
+                        <div class="machine-card">
+
+
+                            <div class="machine-card-top">
+
+                                <div>
+
+                                    <span class="machine-id">
+                                        MACHINE M-024
+                                    </span>
+
+                                    <h4>
+                                        Machine 24
+                                    </h4>
+
+                                </div>
+
+
+                                <span class="status-badge normal">
+
+                                    <span></span>
+
+                                    Monitoring
+
+                                </span>
+
+                            </div>
+
+
+
+                            <div class="machine-visual-small">
+
+                                <div class="machine-ring">
+
+                                    <div class="machine-core">
+
+                                        <i class="bi bi-gear-wide-connected"></i>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="machine-ai">
+
+                                    <i class="bi bi-cpu"></i>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="health-row">
+
+                                <div>
+
+                                    <small>
+                                        Machine Age
+                                    </small>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <small>
+                                        Model
+                                    </small>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="sensor-grid">
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-lightning-charge"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Voltage
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-arrow-repeat"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Rotation
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-speedometer2"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Pressure
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-activity"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Vibration
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="risk-section">
+
+                                <div>
+
+                                    <small>
+                                        Failure Risk
+                                    </small>
+
+                                    <strong class="risk-normal">
+                                        Pending
+                                    </strong>
+
+                                </div>
+
+
+                                <span>
+                                    ML not connected
+                                </span>
+
+                            </div>
+
+
+
+                            <button
+                                class="view-machine-btn"
+                                onclick="viewMachine('M-024')">
+
+                                View Machine
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= MACHINE 063 ================= -->
+
+                    <div
+                        class="col-md-6 col-xl-4 machine-item"
+                        data-status="normal"
+                        data-name="Machine M-063">
+
+                        <div class="machine-card">
+
+
+                            <div class="machine-card-top">
+
+                                <div>
+
+                                    <span class="machine-id">
+                                        MACHINE M-063
+                                    </span>
+
+                                    <h4>
+                                        Machine 63
+                                    </h4>
+
+                                </div>
+
+
+                                <span class="status-badge normal">
+
+                                    <span></span>
+
+                                    Monitoring
+
+                                </span>
+
+                            </div>
+
+
+
+                            <div class="machine-visual-small">
+
+                                <div class="machine-ring">
+
+                                    <div class="machine-core">
+
+                                        <i class="bi bi-gear-wide-connected"></i>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="machine-ai">
+
+                                    <i class="bi bi-cpu"></i>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="health-row">
+
+                                <div>
+
+                                    <small>
+                                        Machine Age
+                                    </small>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <small>
+                                        Model
+                                    </small>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="sensor-grid">
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-lightning-charge"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Voltage
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-arrow-repeat"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Rotation
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-speedometer2"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Pressure
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-activity"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Vibration
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="risk-section">
+
+                                <div>
+
+                                    <small>
+                                        Failure Risk
+                                    </small>
+
+                                    <strong class="risk-normal">
+                                        Pending
+                                    </strong>
+
+                                </div>
+
+
+                                <span>
+                                    ML not connected
+                                </span>
+
+                            </div>
+
+
+
+                            <button
+                                class="view-machine-btn"
+                                onclick="viewMachine('M-063')">
+
+                                View Machine
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= MACHINE 078 ================= -->
+
+                    <div
+                        class="col-md-6 col-xl-4 machine-item"
+                        data-status="normal"
+                        data-name="Machine M-078">
+
+                        <div class="machine-card">
+
+                            <div class="machine-card-top">
+
+                                <div>
+
+                                    <span class="machine-id">
+                                        MACHINE M-078
+                                    </span>
+
+                                    <h4>
+                                        Machine 78
+                                    </h4>
+
+                                </div>
+
+
+                                <span class="status-badge normal">
+
+                                    <span></span>
+
+                                    Monitoring
+
+                                </span>
+
+                            </div>
+
+
+
+                            <div class="machine-visual-small">
+
+                                <div class="machine-ring">
+
+                                    <div class="machine-core">
+
+                                        <i class="bi bi-gear-wide-connected"></i>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="machine-ai">
+
+                                    <i class="bi bi-cpu"></i>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="health-row">
+
+                                <div>
+
+                                    <small>
+                                        Machine Age
+                                    </small>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <small>
+                                        Model
+                                    </small>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="sensor-grid">
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-lightning-charge"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Voltage
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-arrow-repeat"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Rotation
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-speedometer2"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Pressure
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-activity"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Vibration
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="risk-section">
+
+                                <div>
+
+                                    <small>
+                                        Failure Risk
+                                    </small>
+
+                                    <strong class="risk-normal">
+                                        Pending
+                                    </strong>
+
+                                </div>
+
+
+                                <span>
+                                    ML not connected
+                                </span>
+
+                            </div>
+
+
+
+                            <button
+                                class="view-machine-btn"
+                                onclick="viewMachine('M-078')">
+
+                                View Machine
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= MACHINE 091 ================= -->
+
+                    <div
+                        class="col-md-6 col-xl-4 machine-item"
+                        data-status="normal"
+                        data-name="Machine M-091">
+
+                        <div class="machine-card">
+
+                            <div class="machine-card-top">
+
+                                <div>
+
+                                    <span class="machine-id">
+                                        MACHINE M-091
+                                    </span>
+
+                                    <h4>
+                                        Machine 91
+                                    </h4>
+
+                                </div>
+
+
+                                <span class="status-badge normal">
+
+                                    <span></span>
+
+                                    Monitoring
+
+                                </span>
+
+                            </div>
+
+
+
+                            <div class="machine-visual-small">
+
+                                <div class="machine-ring">
+
+                                    <div class="machine-core">
+
+                                        <i class="bi bi-gear-wide-connected"></i>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="machine-ai">
+
+                                    <i class="bi bi-cpu"></i>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="health-row">
+
+                                <div>
+
+                                    <small>
+                                        Machine Age
+                                    </small>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <small>
+                                        Model
+                                    </small>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="sensor-grid">
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-lightning-charge"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Voltage
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-arrow-repeat"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Rotation
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-speedometer2"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Pressure
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-activity"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Vibration
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="risk-section">
+
+                                <div>
+
+                                    <small>
+                                        Failure Risk
+                                    </small>
+
+                                    <strong class="risk-normal">
+                                        Pending
+                                    </strong>
+
+                                </div>
+
+
+                                <span>
+                                    ML not connected
+                                </span>
+
+                            </div>
+
+
+
+                            <button
+                                class="view-machine-btn"
+                                onclick="viewMachine('M-091')">
+
+                                View Machine
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= MACHINE 100 ================= -->
+
+                    <div
+                        class="col-md-6 col-xl-4 machine-item"
+                        data-status="normal"
+                        data-name="Machine M-100">
+
+                        <div class="machine-card">
+
+                            <div class="machine-card-top">
+
+                                <div>
+
+                                    <span class="machine-id">
+                                        MACHINE M-100
+                                    </span>
+
+                                    <h4>
+                                        Machine 100
+                                    </h4>
+
+                                </div>
+
+
+                                <span class="status-badge normal">
+
+                                    <span></span>
+
+                                    Monitoring
+
+                                </span>
+
+                            </div>
+
+
+
+                            <div class="machine-visual-small">
+
+                                <div class="machine-ring">
+
+                                    <div class="machine-core">
+
+                                        <i class="bi bi-gear-wide-connected"></i>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="machine-ai">
+
+                                    <i class="bi bi-cpu"></i>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="health-row">
+
+                                <div>
+
+                                    <small>
+                                        Machine Age
+                                    </small>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <small>
+                                        Model
+                                    </small>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="sensor-grid">
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-lightning-charge"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Voltage
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-arrow-repeat"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Rotation
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-speedometer2"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Pressure
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-sensor">
+
+                                    <i class="bi bi-activity"></i>
+
+                                    <div>
+
+                                        <small>
+                                            Vibration
+                                        </small>
+
+                                        <strong>
+                                            —
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="risk-section">
+
+                                <div>
+
+                                    <small>
+                                        Failure Risk
+                                    </small>
+
+                                    <strong class="risk-normal">
+                                        Pending
+                                    </strong>
+
+                                </div>
+
+
+                                <span>
+                                    ML not connected
+                                </span>
+
+                            </div>
+
+
+
+                            <button
+                                class="view-machine-btn"
+                                onclick="viewMachine('M-100')">
+
+                                View Machine
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <!-- ================= EMPTY STATE ================= -->
+
+                <div
+                    id="emptyState"
+                    class="empty-state">
+
+                    <i class="bi bi-search"></i>
+
+
+                    <h4>
+                        No Machines Found
+                    </h4>
+
+
+                    <p>
+                        Try another machine ID or model.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <div class="page-footer">
+
+                <div>
+
+                    <strong>
+                        SMDE
+                    </strong>
+
+
+                    <span>
+                        Smart Maintenance Decision Engine
+                    </span>
+
+                </div>
+
+
+                <span>
+                    Predictive Maintenance System
+                </span>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Shared Layout -->
+
+<script src="./js/app-layout.js"></script>
+<script src="./js/animations.js"></script>
+<script src="./js/machine.js"></script>
+</body>
+
+</html>

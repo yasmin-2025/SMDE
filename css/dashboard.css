@@ -1,0 +1,553 @@
+/* =========================================================
+   DASHBOARD HERO
+========================================================= */
+
+.dashboard-hero {
+
+    min-height: 220px;
+
+    padding: 42px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(12, 27, 45, .95),
+            rgba(8, 22, 38, .78)
+        );
+
+    border: 1px solid rgba(255, 255, 255, .06);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.hero-content {
+
+    max-width: 650px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.dashboard-hero h1 {
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    margin: 10px 0 12px;
+}
+
+.dashboard-hero h1 span {
+
+    color: #168cff;
+}
+
+.dashboard-hero p {
+
+    color: #71869d;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+.hero-machine {
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(22, 140, 255, .08);
+
+    border: 1px solid rgba(22, 140, 255, .15);
+
+    box-shadow:
+        0 0 50px rgba(22, 140, 255, .08);
+
+    margin-right: 35px;
+}
+
+.hero-machine i {
+
+    font-size: 70px;
+
+    color: #168cff;
+
+    opacity: .85;
+}
+
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+
+/* =========================================================
+   DATASET CARDS
+========================================================= */
+
+.dataset-card {
+
+    height: 100%;
+
+    padding: 22px;
+
+    border-radius: 16px;
+
+    background: rgba(12, 27, 45, .78);
+
+    border: 1px solid rgba(255, 255, 255, .06);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    transition: .3s;
+}
+
+.dataset-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: rgba(22, 140, 255, .22);
+
+    background: rgba(14, 31, 51, .9);
+}
+
+.dataset-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    min-width: 48px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(22, 140, 255, .10);
+
+    color: #58adff;
+
+    font-size: 20px;
+}
+
+.dataset-card span {
+
+    display: block;
+
+    color: #70869d;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .6px;
+}
+
+.dataset-card h3 {
+
+    margin: 4px 0 2px;
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+.dataset-card small {
+
+    color: #526a82;
+
+    font-size: 10px;
+}
+
+
+
+/* =========================================================
+   MACHINE MODELS
+========================================================= */
+
+.model-data-card {
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background: rgba(8, 22, 38, .75);
+
+    border: 1px solid rgba(255, 255, 255, .05);
+
+    transition: .3s;
+}
+
+.model-data-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(22, 140, 255, .22);
+}
+
+.model-image {
+
+    width: 85px;
+
+    height: 85px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(22, 140, 255, .08);
+
+    border: 1px solid rgba(22, 140, 255, .12);
+}
+
+.model-image i {
+
+    font-size: 38px;
+
+    color: #58adff;
+}
+
+.model-data-card h5 {
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.model-data-card span {
+
+    color: #657b92;
+
+    font-size: 11px;
+}
+
+
+
+/* =========================================================
+   SENSOR DATA
+========================================================= */
+
+.sensor-card {
+
+    min-height: 125px;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    background: rgba(8, 22, 38, .72);
+
+    border: 1px solid rgba(255, 255, 255, .05);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    transition: .3s;
+}
+
+.sensor-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: rgba(22, 140, 255, .20);
+}
+
+.sensor-card i {
+
+    font-size: 21px;
+
+    color: #58adff;
+
+    margin-bottom: 12px;
+}
+
+.sensor-card span {
+
+    color: #d9e2ec;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 4px;
+}
+
+.sensor-card strong {
+
+    color: #61778e;
+
+    font-size: 10px;
+
+    font-weight: 400;
+}
+
+
+
+/* =========================================================
+   EVENTS
+========================================================= */
+
+.event-card {
+
+    height: 100%;
+
+    padding: 26px;
+
+    border-radius: 17px;
+
+    background: rgba(12, 27, 45, .78);
+
+    border: 1px solid rgba(255, 255, 255, .06);
+
+    transition: .3s;
+}
+
+.event-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: rgba(22, 140, 255, .20);
+}
+
+.event-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(22, 140, 255, .09);
+
+    color: #58adff;
+
+    font-size: 18px;
+}
+
+.event-card .section-label {
+
+    display: block;
+
+    margin-bottom: 7px;
+}
+
+.event-card h4 {
+
+    font-size: 27px;
+
+    margin: 0 0 7px;
+}
+
+.event-card p {
+
+    color: #667d94;
+
+    font-size: 11px;
+
+    margin: 0;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   MINI TABLE — RECENT PREDICTIONS
+========================================================= */
+
+.mini-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.mini-table thead th {
+
+    color: #70869d;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: .7px;
+
+    text-transform: uppercase;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+    padding: 10px 8px;
+
+    text-align: left;
+}
+
+.mini-table tbody td {
+
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
+
+    padding: 12px 8px;
+
+    font-size: 12px;
+}
+
+.mini-table tbody tr:last-child td {
+
+    border-bottom: 0;
+}
+
+
+
+/* =========================================================
+   RISK BADGES
+========================================================= */
+
+.risk-badge,
+.status-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.risk-low {
+
+    color: #48d597;
+
+    background: rgba(25, 211, 138, .10);
+}
+
+.risk-medium {
+
+    color: #ffad42;
+
+    background: rgba(255, 173, 66, .10);
+}
+
+.risk-high {
+
+    color: #ff4d67;
+
+    background: rgba(255, 77, 103, .10);
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .dashboard-hero {
+
+        padding: 28px;
+
+        min-height: 190px;
+    }
+
+    .dashboard-hero h1 {
+
+        font-size: 27px;
+    }
+
+    .hero-machine {
+
+        width: 100px;
+
+        height: 100px;
+
+        margin-right: 0;
+    }
+
+    .hero-machine i {
+
+        font-size: 45px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .dashboard-hero {
+
+        padding: 24px;
+    }
+
+    .hero-machine {
+
+        display: none;
+    }
+
+    .dashboard-hero h1 {
+
+        font-size: 24px;
+    }
+}

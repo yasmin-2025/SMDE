@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SMDE | About & Help</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link rel="stylesheet" href="./css/app-shared.css">
+
+    <link rel="stylesheet" href="./css/about.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <div id="sidebarMount" data-active="about"></div>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- CONTENT -->
+        <section class="content-area">
+
+            <!-- HERO -->
+            <div class="hero-section mb-4">
+
+                <div class="hero-icon">
+                    <i class="bi bi-cpu"></i>
+                </div>
+
+                <div class="hero-content">
+
+                    <span class="section-label">
+                        SMART MACHINE DETECTION ENGINE
+                    </span>
+
+                    <h1>
+                        Predict Machine Failures
+                        <span>Before They Happen.</span>
+                    </h1>
+
+                    <p>
+                        SMDE is an intelligent predictive maintenance
+                        system that uses machine sensor data and
+                        Machine Learning to identify potential machine
+                        failures before they occur.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- HOW IT WORKS -->
+            <div class="glass-card mb-4">
+
+                <div class="card-title-row">
+
+                    <div>
+                        <span class="section-label">
+                            SYSTEM WORKFLOW
+                        </span>
+
+                        <h4>How SMDE Works</h4>
+                    </div>
+
+                    <div class="header-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="row g-4 mt-2">
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="step-card">
+
+                            <div class="step-number">
+                                01
+                            </div>
+
+                            <div class="step-icon">
+                                <i class="bi bi-cpu"></i>
+                            </div>
+
+                            <h5>Select Machine</h5>
+
+                            <p>
+                                Choose the machine you want
+                                to analyze from the machine list.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="step-card">
+
+                            <div class="step-number">
+                                02
+                            </div>
+
+                            <div class="step-icon">
+                                <i class="bi bi-speedometer2"></i>
+                            </div>
+
+                            <h5>Enter Sensors</h5>
+
+                            <p>
+                                Provide the machine's current
+                                sensor measurements and parameters.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="step-card">
+
+                            <div class="step-number">
+                                03
+                            </div>
+
+                            <div class="step-icon">
+                                <i class="bi bi-robot"></i>
+                            </div>
+
+                            <h5>Run Prediction</h5>
+
+                            <p>
+                                The Machine Learning model analyzes
+                                the provided machine data.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="step-card">
+
+                            <div class="step-number">
+                                04
+                            </div>
+
+                            <div class="step-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+
+                            <h5>Take Action</h5>
+
+                            <p>
+                                Review the risk level and recommended
+                                maintenance action.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SENSOR PARAMETERS -->
+            <div class="row g-4 mb-4">
+
+                <div class="col-xl-7">
+
+                    <div class="glass-card h-100">
+
+                        <div class="card-title-row">
+
+                            <div>
+                                <span class="section-label">
+                                    MACHINE DATA
+                                </span>
+
+                                <h4>Sensor Parameters</h4>
+                            </div>
+
+                            <div class="header-icon">
+                                <i class="bi bi-activity"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="parameter-list">
+
+                            <div class="parameter-item">
+
+                                <div class="parameter-icon">
+                                    <i class="bi bi-thermometer-half"></i>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Air Temperature
+                                    </strong>
+
+                                    <span>
+                                        Ambient machine temperature
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="parameter-item">
+
+                                <div class="parameter-icon">
+                                    <i class="bi bi-fire"></i>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Process Temperature
+                                    </strong>
+
+                                    <span>
+                                        Operating process temperature
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="parameter-item">
+
+                                <div class="parameter-icon">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Rotational Speed
+                                    </strong>
+
+                                    <span>
+                                        Machine rotational speed in RPM
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="parameter-item">
+
+                                <div class="parameter-icon">
+                                    <i class="bi bi-speedometer"></i>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Torque
+                                    </strong>
+
+                                    <span>
+                                        Rotational force applied to the machine
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="parameter-item">
+
+                                <div class="parameter-icon">
+                                    <i class="bi bi-tools"></i>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Tool Wear
+                                    </strong>
+
+                                    <span>
+                                        Tool usage duration in minutes
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ML MODEL -->
+                <div class="col-xl-5">
+
+                    <div class="glass-card h-100 model-card">
+
+                        <div class="card-title-row">
+
+                            <div>
+                                <span class="section-label">
+                                    ARTIFICIAL INTELLIGENCE
+                                </span>
+
+                                <h4>Prediction Model</h4>
+                            </div>
+
+                            <div class="header-icon">
+                                <i class="bi bi-brain"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="model-visual">
+
+                            <div class="brain-circle">
+                                <i class="bi bi-cpu"></i>
+                            </div>
+
+                            <div class="pulse pulse-one"></div>
+                            <div class="pulse pulse-two"></div>
+
+                        </div>
+
+
+                        <h5>
+                            Machine Failure Classification
+                        </h5>
+
+                        <p>
+                            The ML model evaluates machine parameters
+                            and estimates the probability of a
+                            potential failure.
+                        </p>
+
+
+                        <div class="model-output">
+
+                            <div>
+                                <span>Output</span>
+                                <strong>Failure Probability</strong>
+                            </div>
+
+                            <div>
+                                <span>Classification</span>
+                                <strong>Normal / Failure</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RISK LEVELS -->
+            <div class="glass-card mb-4">
+
+                <div class="card-title-row">
+
+                    <div>
+                        <span class="section-label">
+                            RISK ANALYSIS
+                        </span>
+
+                        <h4>Understanding Risk Levels</h4>
+                    </div>
+
+                    <div class="header-icon">
+                        <i class="bi bi-bar-chart"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="row g-3 mt-2">
+
+                    <div class="col-md-4">
+
+                        <div class="risk-card low">
+
+                            <div class="risk-icon">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+
+                            <div>
+                                <h5>Low Risk</h5>
+                                <span>0% — 19%</span>
+                                <p>
+                                    Machine is operating normally.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="risk-card medium">
+
+                            <div class="risk-icon">
+                                <i class="bi bi-exclamation-circle"></i>
+                            </div>
+
+                            <div>
+                                <h5>Medium Risk</h5>
+                                <span>20% — 49%</span>
+                                <p>
+                                    Machine requires attention.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="risk-card high">
+
+                            <div class="risk-icon">
+                                <i class="bi bi-x-circle"></i>
+                            </div>
+
+                            <div>
+                                <h5>High Risk</h5>
+                                <span>50% — 100%</span>
+                                <p>
+                                    Immediate maintenance recommended.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FAQ -->
+            <div class="glass-card">
+
+                <div class="card-title-row">
+
+                    <div>
+                        <span class="section-label">
+                            SUPPORT
+                        </span>
+
+                        <h4>Frequently Asked Questions</h4>
+                    </div>
+
+                    <div class="header-icon">
+                        <i class="bi bi-question-lg"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="accordion custom-accordion" id="faqAccordion">
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faqOne"
+                            >
+                                What is SMDE?
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faqOne"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion"
+                        >
+
+                            <div class="accordion-body">
+                                SMDE is a Smart Machine Detection Engine
+                                designed to predict possible machine
+                                failures using sensor data and
+                                Machine Learning.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faqTwo"
+                            >
+                                What data does the prediction use?
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faqTwo"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion"
+                        >
+
+                            <div class="accordion-body">
+                                The prediction uses machine parameters
+                                such as air temperature, process
+                                temperature, rotational speed, torque,
+                                tool wear, and machine type.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faqThree"
+                            >
+                                What does failure probability mean?
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faqThree"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion"
+                        >
+
+                            <div class="accordion-body">
+                                Failure probability represents the
+                                estimated likelihood that the machine
+                                may experience a failure based on the
+                                current sensor values.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faqFour"
+                            >
+                                Are predictions stored?
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faqFour"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion"
+                        >
+
+                            <div class="accordion-body">
+                                Yes. In the final connected version,
+                                prediction results will be stored in
+                                the database and displayed in the
+                                Prediction History page.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER -->
+            <div class="page-footer">
+
+                <div>
+                    <strong>SMDE</strong>
+                    <span>
+                        Smart Machine Detection Engine
+                    </span>
+                </div>
+
+                <span>
+                    Predictive Maintenance System
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script src="./js/app-layout.js"></script>
+<script src="./js/animations.js"></script>
+
+<script src="./js/about.js"></script>
+
+</body>
+</html>

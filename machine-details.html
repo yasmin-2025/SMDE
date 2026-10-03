@@ -1,0 +1,1001 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Machine Details | SMDE</title>
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Shared CSS -->
+
+    <link
+        rel="stylesheet"
+        href="./css/app-shared.css"
+    >
+
+    <!-- Machine Details CSS -->
+
+    <link
+        rel="stylesheet"
+        href="./css/machine-details.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app-container">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <div
+        id="sidebarMount"
+        data-active="machines">
+    </div>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <section class="content-area">
+
+
+            <!-- ================= MACHINE HEADER ================= -->
+
+            <section class="machine-header">
+
+
+                <div class="machine-title">
+
+
+                    <div class="machine-icon">
+
+                        <i class="bi bi-gear-wide-connected"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span
+                            class="machine-id"
+                            id="machineId">
+
+                            MACHINE ID · M-017
+
+                        </span>
+
+
+                        <h2 id="machineName">
+
+                            Machine 17
+
+                        </h2>
+
+
+                        <div class="status">
+
+                            <span class="status-dot"></span>
+
+                            <span id="machineStatus">
+
+                                Monitoring
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RUN PREDICTION -->
+
+                <button
+                    class="prediction-btn"
+                    onclick="goToPrediction()">
+
+                    Run Prediction
+
+                    <span>→</span>
+
+                </button>
+
+
+            </section>
+
+
+
+            <!-- ================= MACHINE OVERVIEW ================= -->
+
+            <section class="section">
+
+
+                <div class="section-heading">
+
+                    <h3>
+                        Machine Overview
+                    </h3>
+
+                    <p>
+                        Machine information from the maintenance dataset
+                    </p>
+
+                </div>
+
+
+
+                <div class="overview-grid">
+
+
+                    <!-- MODEL -->
+
+                    <div class="info-card">
+
+                        <span class="info-icon">
+
+                            <i class="bi bi-cpu"></i>
+
+                        </span>
+
+
+                        <div>
+
+                            <p>
+                                Machine Model
+                            </p>
+
+                            <h4 id="machineModel">
+                                —
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- AGE -->
+
+                    <div class="info-card">
+
+                        <span class="info-icon">
+
+                            <i class="bi bi-calendar3"></i>
+
+                        </span>
+
+
+                        <div>
+
+                            <p>
+                                Machine Age
+                            </p>
+
+                            <h4 id="machineAge">
+                                —
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LAST MAINTENANCE -->
+
+                    <div class="info-card">
+
+                        <span class="info-icon">
+
+                            <i class="bi bi-wrench-adjustable"></i>
+
+                        </span>
+
+
+                        <div>
+
+                            <p>
+                                Last Maintenance
+                            </p>
+
+                            <h4 id="lastMaintenance">
+                                —
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STATUS -->
+
+                    <div class="info-card">
+
+                        <span class="info-icon">
+
+                            <i class="bi bi-activity"></i>
+
+                        </span>
+
+
+                        <div>
+
+                            <p>
+                                Current Status
+                            </p>
+
+                            <h4
+                                class="green"
+                                id="currentStatus">
+
+                                Monitoring
+
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================= LATEST TELEMETRY ================= -->
+
+            <section class="section">
+
+
+                <div class="section-heading">
+
+
+                    <div>
+
+                        <h3>
+                            Latest Telemetry
+                        </h3>
+
+                        <p>
+                            Latest available machine sensor readings
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="sensor-grid">
+
+
+                    <!-- VOLTAGE -->
+
+                    <div class="sensor-card">
+
+
+                        <div class="sensor-top">
+
+
+                            <div class="sensor-name">
+
+                                <span class="sensor-symbol">
+
+                                    <i class="bi bi-lightning-charge"></i>
+
+                                </span>
+
+                                Voltage
+
+                            </div>
+
+
+                            <span class="sensor-status">
+                                —
+                            </span>
+
+
+                        </div>
+
+
+
+                        <h2>
+
+                            <span id="voltage">
+                                —
+                            </span>
+
+                            <small>
+                                V
+                            </small>
+
+                        </h2>
+                        <div class="progress">
+
+                            <span
+                                id="voltageProgress"
+                                style="width: 0%">
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="range">
+
+                            <span>
+                                Latest reading
+                            </span>
+
+                            <span>
+                                —
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ROTATION -->
+
+                    <div class="sensor-card">
+
+
+                        <div class="sensor-top">
+
+
+                            <div class="sensor-name">
+
+                                <span class="sensor-symbol">
+
+                                    <i class="bi bi-arrow-repeat"></i>
+
+                                </span>
+
+                                Rotation
+
+                            </div>
+
+
+                            <span class="sensor-status">
+                                —
+                            </span>
+
+
+                        </div>
+
+
+
+                        <h2>
+
+                            <span id="rotation">
+                                —
+                            </span>
+
+                            <small>
+                                rpm
+                            </small>
+
+                        </h2>
+
+
+
+                        <div class="progress">
+
+                            <span
+                                id="rotationProgress"
+                                style="width: 0%">
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="range">
+
+                            <span>
+                                Latest reading
+                            </span>
+
+                            <span>
+                                —
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- PRESSURE -->
+
+                    <div class="sensor-card">
+
+
+                        <div class="sensor-top">
+
+
+                            <div class="sensor-name">
+
+                                <span class="sensor-symbol">
+
+                                    <i class="bi bi-speedometer2"></i>
+
+                                </span>
+
+                                Pressure
+
+                            </div>
+
+
+                            <span class="sensor-status">
+                                —
+                            </span>
+
+
+                        </div>
+
+
+
+                        <h2>
+
+                            <span id="pressure">
+                                —
+                            </span>
+
+                            <small>
+                                psi
+                            </small>
+
+                        </h2>
+
+
+
+                        <div class="progress">
+
+                            <span
+                                id="pressureProgress"
+                                style="width: 0%">
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="range">
+
+                            <span>
+                                Latest reading
+                            </span>
+
+                            <span>
+                                —
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- VIBRATION -->
+
+                    <div class="sensor-card">
+
+
+                        <div class="sensor-top">
+
+
+                            <div class="sensor-name">
+
+                                <span class="sensor-symbol">
+
+                                    <i class="bi bi-activity"></i>
+
+                                </span>
+
+                                Vibration
+
+                            </div>
+
+
+                            <span class="sensor-status">
+                                —
+                            </span>
+
+
+                        </div>
+
+
+
+                        <h2>
+
+                            <span id="vibration">
+                                —
+                            </span>
+
+                            <small>
+                                mm/s
+                            </small>
+
+                        </h2>
+
+
+
+                        <div class="progress">
+
+                            <span
+                                id="vibrationProgress"
+                                style="width: 0%">
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="range">
+
+                            <span>
+                                Latest reading
+                            </span>
+
+                            <span>
+                                —
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================= MACHINE HEALTH ================= -->
+
+            <section class="bottom-grid">
+
+
+                <!-- HEALTH -->
+
+                <div class="health-card">
+
+
+                    <div class="section-heading">
+
+                        <h3>
+                            Machine Health
+                        </h3>
+
+                        <p>
+                            Overall machine condition
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="health-content">
+
+
+                        <div class="health-circle">
+
+
+                            <div>
+
+                              
+                   
+                         <strong id="healthScore">
+                            0%
+                          </strong>
+
+                                <span>
+                                    Health Score
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="health-info">
+
+
+                            <div class="health-row">
+
+                                <span>
+                                    Voltage
+                                </span>
+
+                                <strong>
+                                    —
+                                </strong>
+
+                            </div>
+
+
+
+                            <div class="health-row">
+
+                                <span>
+                                    Rotation
+                                </span>
+
+                                <strong>
+                                    —
+                                </strong>
+
+                            </div>
+
+
+
+                            <div class="health-row">
+
+                                <span>
+                                    Pressure
+                                </span>
+
+                                <strong>
+                                    —
+                                </strong>
+
+                            </div>
+
+
+
+                            <div class="health-row">
+
+                                <span>
+                                    Vibration
+                                </span>
+
+                                <strong>
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- MAINTENANCE -->
+
+                <div class="maintenance-card">
+
+
+                    <div class="section-heading">
+
+                        <h3>
+                            Maintenance
+                        </h3>
+
+                        <p>
+                            Machine maintenance information
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="maintenance-item">
+
+
+                        <div class="maintenance-icon">
+
+                            <i class="bi bi-check-circle"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Last Maintenance
+                            </strong>
+
+                            <p id="maintenanceDate">
+                                —
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="maintenance-item">
+
+
+                        <div class="maintenance-icon">
+
+                            <i class="bi bi-database"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Maintenance Records
+                            </strong>
+
+                            <p id="maintenanceCount">
+                                —
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <button
+                        class="maintenance-btn"
+                        onclick="viewMaintenanceHistory()">
+
+                        View Maintenance History
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================= HISTORY ================= -->
+
+            <section class="section">
+
+
+                <div class="section-heading">
+
+                    <h3>
+                        Machine History
+                    </h3>
+
+                    <p>
+                        Recent errors and failures recorded for this machine
+                    </p>
+
+                </div>
+
+
+
+                <div class="bottom-grid">
+
+
+                    <!-- ================= ERROR HISTORY ================= -->
+
+                    <div class="maintenance-card">
+
+
+                        <div class="section-heading">
+
+                            <h3>
+                                Error History
+                            </h3>
+
+                            <p>
+                                Latest recorded machine error
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="maintenance-item">
+
+
+                            <div class="maintenance-icon">
+
+                                <i class="bi bi-exclamation-circle"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Latest Error
+                                </strong>
+
+                                <p id="latestError">
+                                    —
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="maintenance-item">
+
+
+                            <div class="maintenance-icon">
+
+                                <i class="bi bi-database"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Error Records
+                                </strong>
+
+                                <p id="errorCount">
+                                    —
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ================= FAILURE HISTORY ================= -->
+
+                    <div class="maintenance-card">
+
+
+                        <div class="section-heading">
+
+                            <h3>
+                                Failure History
+                            </h3>
+
+                            <p>
+                                Latest recorded machine failure
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="maintenance-item">
+
+
+                            <div class="maintenance-icon">
+
+                                <i class="bi bi-x-circle"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Latest Failure
+                                </strong>
+
+                                <p id="latestFailure">
+                                    —
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="maintenance-item">
+
+
+                            <div class="maintenance-icon">
+
+                                <i class="bi bi-database"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Failure Records
+                                </strong>
+
+                                <p id="failureCount">
+                                    —
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="./js/app-layout.js"></script>
+
+<script src="./js/animations.js"></script>
+
+<script src="./js/machine-details.js"></script>
+
+
+</body>
+
+</html>
+
+

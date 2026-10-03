@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SMDE | Profile</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/app-shared.css">
+
+    <link rel="stylesheet" href="./css/profile.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- ================= SIDEBAR ================= -->
+    <div id="sidebarMount" data-active="profile"></div>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+
+
+        <!-- ================= PAGE CONTENT ================= -->
+        <section class="content-area">
+
+            <!-- PROFILE HEADER -->
+            <div class="profile-header mb-4">
+
+                <div class="profile-avatar">
+                    A
+                </div>
+
+                <div class="profile-main-info">
+
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+
+                        <h2>Administrator</h2>
+
+                        <span class="badge status-badge">
+                            <i class="bi bi-circle-fill"></i>
+                            Active
+                        </span>
+
+                    </div>
+
+                    <p>
+                        System Administrator
+                    </p>
+
+                    <small>
+                        <i class="bi bi-shield-check"></i>
+                        Full system access
+                    </small>
+
+                </div>
+
+                <button
+                    class="btn edit-profile-btn"
+                    id="editProfileBtn"
+                >
+                    <i class="bi bi-pencil"></i>
+                    Edit Profile
+                </button>
+
+            </div>
+
+
+            <!-- ================= ROW ================= -->
+            <div class="row g-4">
+
+                <!-- ACCOUNT INFORMATION -->
+                <div class="col-xl-8">
+
+                    <div class="glass-card">
+
+                        <div class="card-header-custom">
+
+                            <div>
+                                <span class="section-label">
+                                    ACCOUNT
+                                </span>
+
+                                <h4>Account Information</h4>
+                            </div>
+
+                            <div class="header-icon">
+                                <i class="bi bi-person-vcard"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row g-4">
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Full Name
+                                </label>
+
+                                <div class="info-field">
+                                    <i class="bi bi-person"></i>
+                                    <span id="fullName">
+                                        Administrator
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <!-- <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Username
+                                </label>
+
+                                <div class="info-field">
+                                    <i class="bi bi-at"></i>
+                                    <span id="username">
+                                        admin
+                                    </span>
+                                </div>
+
+                            </div> -->
+
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Email Address
+                                </label>
+
+                                <div class="info-field">
+                                    <i class="bi bi-envelope"></i>
+                                    <span id="email">
+                                        admin@smde.com
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <!-- <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Role
+                                </label>
+
+                                <div class="info-field">
+                                    <i class="bi bi-shield-lock"></i>
+                                    <span>
+                                        Administrator
+                                    </span>
+                                </div>
+
+                            </div> -->
+
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Account Created
+                                </label>
+
+                                <div class="info-field">
+                                    <i class="bi bi-calendar3"></i>
+                                    <span>
+                                        01 September 2026
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Last Login
+                                </label>
+
+                                <div class="info-field">
+                                    <i class="bi bi-clock"></i>
+                                    <span>
+                                        Today, 12:05 AM
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SECURITY -->
+                    <div class="glass-card mt-4">
+
+                        <div class="card-header-custom">
+
+                            <div>
+                                <span class="section-label">
+                                    SECURITY
+                                </span>
+
+                                <h4>Security Settings</h4>
+                            </div>
+
+                            <div class="header-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="security-item">
+
+                            <div class="security-icon">
+                                <i class="bi bi-key"></i>
+                            </div>
+
+                            <div class="security-info">
+
+                                <h6>Password</h6>
+
+                                <p>
+                                    Last changed 30 days ago
+                                </p>
+
+                            </div>
+
+                            <button
+                                class="btn security-btn"
+                                id="changePasswordBtn"
+                            >
+                                Change
+                            </button>
+
+                        </div>
+
+
+                        <div class="security-item">
+
+                            <div class="security-icon">
+                                <i class="bi bi-phone"></i>
+                            </div>
+
+                            <div class="security-info">
+
+                                <h6>Two-Factor Authentication</h6>
+
+                                <p>
+                                    Add an extra layer of security
+                                </p>
+
+                            </div>
+
+                            <span class="badge disabled-badge">
+                                Not Enabled
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT COLUMN -->
+                <div class="col-xl-4">
+
+                    <!-- ACCOUNT STATUS -->
+                    <div class="glass-card status-card">
+
+                        <div class="card-header-custom">
+
+                            <div>
+                                <span class="section-label">
+                                    STATUS
+                                </span>
+
+                                <h4>Account Status</h4>
+                            </div>
+
+                            <div class="header-icon">
+                                <i class="bi bi-activity"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="status-main">
+
+                            <div class="status-circle">
+
+                                <i class="bi bi-check-lg"></i>
+
+                            </div>
+
+                            <h5>System Active</h5>
+
+                            <p>
+                                Your account is currently active
+                                and has full access to the system.
+                            </p>
+
+                        </div>
+
+
+                        <div class="status-details">
+
+                            <div>
+                                <span>Access Level</span>
+                                <strong>Full Access</strong>
+                            </div>
+
+                            <div>
+                                <span>Account Type</span>
+                                <strong>Administrator</strong>
+                            </div>
+
+                            <div>
+                                <span>System Status</span>
+                                <strong class="online-text">
+                                    Online
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RECENT ACTIVITY -->
+                    <div class="glass-card mt-4">
+
+                        <div class="card-header-custom">
+
+                            <div>
+                                <span class="section-label">
+                                    ACTIVITY
+                                </span>
+
+                                <h4>Recent Activity</h4>
+                            </div>
+
+                            <div class="header-icon">
+                                <i class="bi bi-list-check"></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon prediction">
+                                    <i class="bi bi-robot"></i>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Prediction performed
+                                    </strong>
+
+                                    <small>
+                                        MCH-001
+                                    </small>
+
+                                    <span>
+                                        5 minutes ago
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon machine">
+                                    <i class="bi bi-cpu"></i>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Machine viewed
+                                    </strong>
+
+                                    <small>
+                                        MCH-003
+                                    </small>
+
+                                    <span>
+                                        1 hour ago
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon login">
+                                    <i class="bi bi-box-arrow-in-right"></i>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Successful login
+                                    </strong>
+
+                                    <small>
+                                        System Access
+                                    </small>
+
+                                    <span>
+                                        Today
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ================= EDIT PROFILE MODAL ================= -->
+
+<div
+    class="modal fade"
+    id="editProfileModal"
+    tabindex="-1"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content custom-modal">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <small>ACCOUNT</small>
+
+                    <h5 class="modal-title">
+                        Edit Profile
+                    </h5>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="modal"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control custom-input"
+                        id="editName"
+                        value="Administrator"
+                    >
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control custom-input"
+                        value="admin"
+                        disabled
+                    >
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        class="form-control custom-input"
+                        id="editEmail"
+                        value="admin@smde.com"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="btn save-btn"
+                    id="saveProfileBtn"
+                >
+                    <i class="bi bi-check-lg"></i>
+                    Save Changes
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Bootstrap JS -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<!-- Custom JS -->
+<script src="./js/app-layout.js"></script>
+<script src="./js/animations.js"></script>
+
+<script src="./js/profile.js"></script>
+
+</body>
+</html>

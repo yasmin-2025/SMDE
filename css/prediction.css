@@ -1,0 +1,384 @@
+/* ================= CONTENT =================
+   (.page-content renamed to .content-area in the
+   HTML so it now inherits shared padding — no
+   local override needed here) */
+
+.prediction-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-label {
+    color: var(--blue);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.prediction-intro h2 {
+    margin: 8px 0;
+    font-size: 27px;
+}
+
+.prediction-intro p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.ai-badge {
+    padding: 10px 15px;
+    border-radius: 30px;
+
+    background: rgba(32, 170, 255, 0.08);
+    border: 1px solid rgba(32, 170, 255, 0.2);
+
+    color: var(--blue);
+    font-size: 12px;
+}
+
+
+/* ================= CARD ================= */
+
+.custom-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 25px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.card-header-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 25px;
+}
+
+.card-header-custom h5 {
+    margin: 0;
+}
+
+.card-header-custom h5 i {
+    color: var(--blue);
+    margin-right: 7px;
+}
+
+.card-header-custom p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 7px 0 0;
+}
+
+.status-badge {
+    color: var(--green);
+    font-size: 11px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.status-badge span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 10px var(--green);
+}
+
+
+/* ================= FORM ================= */
+
+.form-label {
+    color: #c5d2e3;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.form-label span {
+    color: var(--muted);
+}
+
+.custom-input {
+    background-color: #081424 !important;
+    border-color: var(--border) !important;
+    color: white !important;
+}
+
+.custom-input::placeholder {
+    color: #56677d;
+}
+
+.custom-input:focus {
+    border-color: var(--blue) !important;
+    box-shadow: 0 0 0 0.15rem rgba(32, 170, 255, 0.12) !important;
+}
+
+.input-group-text {
+    background: #081424;
+    border-color: var(--border);
+    color: var(--blue);
+}
+
+.input-group .custom-input {
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+
+.input-group .unit {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.prediction-action {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-predict {
+    background: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--blue-dark)
+    );
+
+    color: white;
+    border: none;
+
+    padding: 12px 22px;
+    border-radius: 9px;
+
+    box-shadow: 0 8px 25px rgba(32, 170, 255, 0.18);
+
+    transition: 0.3s;
+}
+
+.btn-predict:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(32, 170, 255, 0.3);
+}
+
+.btn-outline-secondary {
+    border-color: var(--border);
+    color: var(--muted);
+}
+
+.btn-outline-secondary:hover {
+    background: var(--card-light);
+    color: white;
+    border-color: var(--border);
+}
+
+
+/* ================= INFO ================= */
+
+.info-card {
+    height: 100%;
+}
+
+.info-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(72, 213, 151, 0.1);
+    color: var(--green);
+
+    font-size: 22px;
+
+    margin-bottom: 18px;
+}
+
+.info-card h5 {
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.info-card hr {
+    border-color: var(--border);
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    font-size: 12px;
+}
+
+.info-item span {
+    color: var(--muted);
+}
+
+
+/* ================= TIP ================= */
+
+.tip-card {
+    margin-top: 15px;
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 193, 7, 0.05);
+    border: 1px solid rgba(255, 193, 7, 0.12);
+
+    display: flex;
+    gap: 12px;
+}
+
+.tip-card > i {
+    color: #ffc107;
+    font-size: 20px;
+}
+
+.tip-card strong {
+    font-size: 12px;
+}
+
+.tip-card p {
+    color: var(--muted);
+    font-size: 11px;
+    margin: 5px 0 0;
+}
+
+
+/* ================= RESULT ================= */
+
+.result-card {
+    background: var(--card);
+
+    border: 1px solid rgba(72, 213, 151, 0.2);
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    animation: slideUp 0.4s ease;
+}
+
+.result-icon {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(72, 213, 151, 0.1);
+    color: var(--green);
+
+    font-size: 25px;
+}
+
+.result-content {
+    flex: 1;
+}
+
+.result-content h3 {
+    margin: 7px 0;
+    font-size: 19px;
+}
+
+.result-content p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.result-score {
+    text-align: right;
+}
+
+.result-score span {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.result-score strong {
+    display: block;
+    color: var(--green);
+    font-size: 30px;
+    margin-top: 4px;
+}
+
+
+/* ================= ANIMATION ================= */
+
+@keyframes slideUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================= RESPONSIVE (page-specific only —
+   sidebar/topbar/content-area collapse behaviour now
+   lives in app-shared.css) ================= */
+
+@media (max-width: 768px) {
+
+    .prediction-intro {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .ai-badge {
+        display: none;
+    }
+
+    .result-card {
+        flex-wrap: wrap;
+    }
+
+    .result-score {
+        width: 100%;
+        text-align: left;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .prediction-action {
+        flex-direction: column;
+    }
+
+    .prediction-action button {
+        width: 100%;
+    }
+
+}

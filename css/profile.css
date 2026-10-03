@@ -1,0 +1,353 @@
+/* ================================
+   PROFILE HEADER
+================================ */
+
+.profile-header {
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.07);
+    background: linear-gradient(
+        135deg,
+        rgba(22, 140, 255,0.12),
+        rgba(0,198,255,0.04)
+    );
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #168cff, #00c6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    box-shadow: 0 0 35px rgba(0,198,255,0.18);
+}
+
+.profile-main-info {
+    flex: 1;
+}
+
+.profile-main-info h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.profile-main-info p {
+    color: #8191a6;
+    margin: 5px 0;
+}
+
+.profile-main-info small {
+    color: #5f8db9;
+}
+
+.status-badge {
+    background: rgba(25,135,84,0.14);
+    color: #48d597;
+    border: 1px solid rgba(72,213,151,0.15);
+}
+
+.status-badge i {
+    font-size: 6px;
+    vertical-align: middle;
+}
+
+.edit-profile-btn {
+    background: #168cff;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 9px;
+}
+
+.edit-profile-btn:hover {
+    background: #0f6fcc;
+    color: #fff;
+}
+
+.card-header-custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.card-header-custom h4 {
+    margin: 4px 0 0;
+    font-size: 18px;
+}
+
+/* ================================
+   INFORMATION
+================================ */
+
+.form-label {
+    color: #70849c;
+    font-size: 12px;
+}
+
+.info-field {
+    background: #091a2c;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 9px;
+    padding: 12px 14px;
+    color: #dbe8f7;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-field i {
+    color: #168cff;
+}
+
+/* ================================
+   SECURITY
+================================ */
+
+.security-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.security-item:last-child {
+    border-bottom: 0;
+}
+
+.security-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(22, 140, 255,0.09);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #168cff;
+}
+
+.security-info {
+    flex: 1;
+}
+
+.security-info h6 {
+    margin: 0;
+}
+
+.security-info p {
+    margin: 3px 0 0;
+    color: #667d96;
+    font-size: 11px;
+}
+
+.security-btn {
+    border: 1px solid rgba(22, 140, 255,0.3);
+    color: #49a5ff;
+}
+
+.security-btn:hover {
+    background: #168cff;
+    color: white;
+}
+
+.disabled-badge {
+    background: rgba(255,193,7,0.10);
+    color: #ffc107;
+}
+
+/* ================================
+   STATUS
+================================ */
+
+.status-main {
+    text-align: center;
+    padding: 10px 10px 25px;
+}
+
+.status-circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    background: rgba(25,135,84,0.12);
+    border: 1px solid rgba(72,213,151,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #48d597;
+    font-size: 30px;
+}
+
+.status-main h5 {
+    margin-bottom: 8px;
+}
+
+.status-main p {
+    color: #71869f;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.status-details {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 15px;
+}
+
+.status-details div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.status-details span {
+    color: #687d95;
+    font-size: 12px;
+}
+
+.status-details strong {
+    font-size: 12px;
+}
+
+.online-text {
+    color: #48d597;
+}
+
+/* ================================
+   ACTIVITY
+================================ */
+
+.activity-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.activity-icon {
+    min-width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-icon.prediction {
+    background: rgba(22, 140, 255,0.12);
+    color: #168cff;
+}
+
+.activity-icon.machine {
+    background: rgba(0,198,255,0.10);
+    color: #00c6ff;
+}
+
+.activity-icon.login {
+    background: rgba(25,135,84,0.10);
+    color: #48d597;
+}
+
+.activity-item strong {
+    display: block;
+    font-size: 12px;
+}
+
+.activity-item small {
+    display: block;
+    color: #71869f;
+    margin-top: 2px;
+}
+
+.activity-item span {
+    display: block;
+    color: #465c74;
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+/* ================================
+   MODAL
+================================ */
+
+.custom-modal {
+    background: #0b1b2d;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #fff;
+}
+
+.custom-modal .modal-header {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.custom-modal .modal-header small {
+    color: #158cff;
+    letter-spacing: 1px;
+}
+
+.custom-modal .modal-footer {
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.custom-input {
+    background: #071522;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #fff;
+}
+
+.custom-input:focus {
+    background: #071522;
+    color: #fff;
+    border-color: #168cff;
+    box-shadow: 0 0 0 0.2rem rgba(22, 140, 255,0.12);
+}
+
+.custom-input:disabled {
+    background: #0a1725;
+}
+
+.save-btn {
+    background: #168cff;
+    color: #fff;
+}
+
+.save-btn:hover {
+    background: #0f6fcc;
+    color: #fff;
+}
+
+/* ================================
+   RESPONSIVE (page-specific only —
+   shared sidebar/topbar responsive
+   rules now live in app-shared.css)
+================================ */
+
+@media (max-width: 768px) {
+
+    .admin-mini div:last-child {
+        display: none;
+    }
+
+    .profile-header {
+        flex-wrap: wrap;
+    }
+
+    .edit-profile-btn {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .profile-avatar {
+        width: 65px;
+        height: 65px;
+    }
+
+}
